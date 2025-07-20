@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Loginpage.css">
+</head>
+<body>
+    <div class="signup-container">
+        <p class="welcome-text">New to <span>Adam&Eve</span>?</p>
+    
+        <form action="profile.html" method="GET">
+          <input type="email" name="email" placeholder="Sign up with Email" required>
+        </form>
+    
+        <form action="profile.html" method="GET">
+          <input type="email" name="mobile" placeholder="Sign up with Mobile" required>
+        </form>
+    
+        <!-- Google Sign-In -->
+        <div class="google-signin">
+          <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+          <div id="g_id_onload"
+               data-client_id="40526192563-23d27a57uofa1fae5iu20li3pe6igcs0.apps.googleusercontent.com"
+               data-callback="handleCredentialResponse">
+          </div>
+          <div class="g_id_signin" data-type="standard" data-theme="outline" data-size="large"></div>
+    
+          <script>
+            function handleCredentialResponse(response) {
+              console.log("Google JWT ID Token:", response.credential);
+            }
+          </script>
+        </div>
+    
+        <div class="login-link">
+          <b>Already have an account?</b>
+          <a href="Personal.html"><button>Login</button></a>
+        </div>
+      </div>
+      <title>Document</title>
+</body>
+</html>

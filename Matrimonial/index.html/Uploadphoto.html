@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Photo</title>
+  <link rel="stylesheet" href="Uploadphoto.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2><i>Upload Photo</i></h2>
+
+    <form id="uploadForm">
+
+      <div class="file-group">
+        <input type="file" name="file1" id="file1" accept="image/*" required />
+        <label for="file1">Choose Profile Photo</label>
+      </div>
+
+
+      <div class="file-group">
+        <input type="file" name="file2" id="file2" accept="image/*" />
+        <label for="file2">Choose Additional Photo</label>
+      </div>
+
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const file1 = document.getElementById("file1").files[0];
+
+      if (file1) {
+        window.location.href = "Yourself.html";
+      } else {
+        alert("Please choose a profile photo before uploading.");
+      }
+    });
+  </script>
+</body>
+</html>
